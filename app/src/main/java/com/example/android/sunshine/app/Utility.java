@@ -17,13 +17,18 @@ package com.example.android.sunshine.app;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceManager;
 import android.text.format.Time;
 
 import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
+import com.google.android.gms.wearable.Asset;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -574,5 +579,22 @@ public class Utility {
         SharedPreferences.Editor spe = sp.edit();
         spe.putInt(c.getString(R.string.pref_location_status_key), SunshineSyncAdapter.LOCATION_STATUS_UNKNOWN);
         spe.apply();
+    }
+    public static Asset toAsset(int artResource, Context context) {
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), artResource);
+        ByteArrayOutputStream byteStream = null;
+        try {
+            byteStream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteStream);
+            return Asset.createFromBytes(byteStream.toByteArray());
+        } finally {
+            if (null != byteStream) {
+                try {
+                    byteStream.close();
+                } catch (IOException e) {
+                    // ignore
+                }
+            }
+        }
     }
 }

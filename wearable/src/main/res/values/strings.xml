@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wearable</string>
+    <string name="my_digital_name">My Digital</string>
+
+    <!-- String formats -->
+    <string name="format_date">EEE, MMM d yyyy</string>¡
+</resources>

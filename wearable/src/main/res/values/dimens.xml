@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="digital_text_size">16dp</dimen>
+    <dimen name="digital_text_size_round">20dp</dimen>
+
+    <!-- Digital x offsets -->
+    <dimen name="digital_x_offset">30dp</dimen>
+    <dimen name="digital_x_offset_round">35dp</dimen>
+    <!-- Digital y offsets -->
+    <dimen name="digital_y_offset">60dp</dimen>
+    <dimen name="digital_y_offset_round">65dp</dimen>
+
+    <!-- Digital text sizes -->
+    <dimen name="digital_text_size_hour">35dp</dimen>
+    <dimen name="digital_text_size_date">17dp</dimen>
+    <dimen name="digital_text_size_temp">25dp</dimen>
+
+    <dimen name="view_separator_width">0.1dp</dimen>
+
+    <!-- Image sizes -->
+    <dimen name="image_size">40dp</dimen>
+
+    <dimen name="weather_icon_width">48dp</dimen>
+    <dimen name="weather_icon_height">48dp</dimen>
+
+    <!-- Offsets -->
+    <dimen name="offset_hour_x">22dp</dimen>
+    <dimen name="offset_date_y">33dp</dimen>
+
+    <dimen name="line_y">55dp</dimen>
+    <dimen name="line_initial_x">50dp</dimen>
+    <dimen name="line_dx">35dp</dimen>
+
+    <dimen name="icon_dy">65dp</dimen>
+
+    <dimen name="temp_max_dx">57dp</dimen>
+    <dimen name="temp_min_dx">100dp</dimen>
+    <dimen name="temp_dy">95dp</dimen>
+
+</resources>
